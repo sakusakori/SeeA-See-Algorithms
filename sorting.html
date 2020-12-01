@@ -15,10 +15,16 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <style>
+        #arrayContainer{
+            color: white;
+            margin-top: 150px;
+        }
+    </style>
     <title>SeeA: See Algorithms </title>
 </head>
 
-<body>
+<body style="background: rgb(0,0,98);">
     <!-- Navbar-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
         <div class="container">
@@ -28,76 +34,51 @@
                 <strong>SeeA</strong>
             </a>
 
-            <!-- Collapse -->
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
-
             <!-- Links -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                 <!-- Left -->
                 <ul class="navbar-nav mr-auto" id="leftNav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="" target="_blank">About</a>
+                        <div class="inputSlider">
+                                <p>Size of array:</p>
+                                <input id="sizeInput" type="range" min=20 max=150 step=1 value=80>
+                                <p>Set Speed:</p>
+                                <input id="speedInput" type="range" min=1 max=5 step=1 value=4>
+                        </div>    
                     </li>
                 </ul>
 
                 <!-- Right -->
                 <ul class="navbar-nav nav-flex-icons" id="rightNav">
                     <li class="nav-item">
-                        <a class="nav-link" id="sortAlgosBtn" href="sorting.html">Sorting Algorithms</a>
+                        <button class="btn btn-warning" id="generateRandom" style="margin-right: 20px; color: white"><b>Random</b></button> 
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="searchAlgosBtn">Searching Algorithms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="otherAlgosBtn">Other</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sorting Algorithms
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <button class="dropdown-item" href="#">Insertion Sort</button>
+                            <button class="dropdown-item" href="#">Bubble Sort</button>
+                            <button class="dropdown-item" href="#">Merge Sort</a>
+                            <button class="dropdown-item" href="#">Quick Sort</button>
+                            <button class="dropdown-item" href="#">Selection Sort</button>
+                            <button class="dropdown-item" href="#">Heap Sort</button>
+                        </div>
                     </li>
                 </ul>
             </div>
-
         </div>
     </nav>
-    <div class="mainContainer" id="mainContainer">
-        <h1 class="mainHead">HEY WELCOME!</h1>
-        <p class="mainBody">Don't worry we will make you understand algorithm very easily! Just Visualize it.</p>
-        <h2 class="contactHead">Contact:</h2>
-        <p class="contactPara">
-            I'm Saksham Sachdeva pursuing Computer Science and Engineering (3rd Year Btech) from IIIT Pune,
-            and I'm currently looking for new opportunities as I wanted to seek experience in <b>technical line of
-                work</b>.
-            My inbox is always open. Whether you have a question or just want to say hi, I'll definately get back to
-            you!
-        </p>
-        <div class="links">
-            <a href="https://github.com/sakusakori" target="_blank">
-                <i class="fa fa-github fa-lg" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/saksham-sachdeva-22a97b180/" target="_blank">
-                <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.codechef.com/users/saksham474011" target="_blank">
-                <i class="fa fa-code fa-lg" aria-hidden="true"></i>
-            </a>
-            <a href="mailto:saksham474011@gmail.com" target="_blank">
-                <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
-            </a>
+    <section>
+        <div id="arrayContainer">
+            Saksham Sachdeva Saksham Sachdeva Saksham Sachdeva Saksham Sachdeva.
         </div>
-        <br><br><br>
-        <a href="mailto:saksham474011@gmail.com" class="mail-link">Visit Me!</a>
-
-    </div>
-
-    <!-- Contact ends -->
-
-
+    </section>
+    
+    
     <!-- Footer starts -->
     <footer id="footer">
         <p style="color: white; text-align: center;">Created by <a href="https://github.com/sakusakori"
@@ -113,7 +94,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
+    <script src="js/index2.js"></script>
+    <script src="js/SeeA.js"></script>
 </body>
 
 </html>
