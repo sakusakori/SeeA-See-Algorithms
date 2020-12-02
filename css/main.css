@@ -152,7 +152,11 @@ section {
 }
 
 section #arrayContainer {
-    margin: 200px 0;
+    border: 2px white solid;
+    margin: 0;
+    position: relative;
+    top: 150px;
+    padding: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -162,4 +166,10 @@ section #arrayContainer {
 
 .hide {
     display: none;
+}
+#barHeading{
+    color: white;
+    position: relative;
+    top: 135px;
+    text-align: center;
 }

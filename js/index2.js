@@ -11,7 +11,7 @@ let dropDownAlgoButtons = document.getElementsByClassName('dropdown-item');
 // console.log(dropDownAlgoButtons);
 // disableButtons();
 
-
+let barHead = document.getElementById('barHeading');
 let arraySize=sizeInput.value;
 let div_sizes=[];
 let divs=[];
@@ -27,6 +27,8 @@ arrayContainer.style="flex-direction:row";
 generateRandom.addEventListener('click', generateRandomArray);
 sizeInput.addEventListener('input', changeArraySize);
 
+
+generateRandomArray();
 //Sets arraySize according to slider and then call generateRandomArray
 function changeArraySize()
 {
@@ -35,21 +37,23 @@ function changeArraySize()
 }
 
 function generateRandomArray(){
+    barHead.innerHTML = 'Bars'
     arrayContainer.innerHTML="";
+
     console.log(arraySize);
     
     for(var i=0;i<arraySize;i++)
     {
         div_sizes[i]=Math.floor(Math.random() * 0.5*(sizeInput.max - sizeInput.min) ) + 10;
         divs[i]=document.createElement('div');
-        console.log(divs[i]);
+        // console.log(divs[i]);
         
         arrayContainer.appendChild(divs[i]);
         margin_size=0.1;
         divs[i].style=" margin:0% " + margin_size + "%; background-color:white; width:" + (100/arraySize-(2*margin_size)) + "%; height:" + (div_sizes[i]) + "%; position: relative;";
     }
 }
-console.log(arrayContainer);
+// console.log(arrayContainer);
 
 
 function disableButtons()
@@ -68,24 +72,31 @@ function disableButtons()
         speedInput.disabled=true;
     }
 }
+for(var i=0;i<dropDownAlgoButtons.length;i++)
+{
+    dropDownAlgoButtons[i].addEventListener('click', runAlgorithms);
+}
 
 function runAlgorithms()
 {
     disableButtons();
     this.classList.add("butt_selected");
+    console.log(this.innerHTML);
+    barHead.innerHTML = `Bars: ${this.innerHTML}`;
+    
     switch(this.innerHTML)
     {
-        case "Insertion Sort":Insertion();
+        case "Insertion Sort":InsertionSort();
                     break;
-        case "Bubble Sort":Bubble();
+        case "Bubble Sort":BubbleSort();
                     break;
-        case "Merge Sort":Merge();
+        case "Merge Sort":MergeSort();
                     break;
-        case "Quick Sort":Quick();
+        case "Quick Sort":QuickSort();
                     break;
-        case "Selection Sort":Selection_sort();
+        case "Selection Sort":SelectionSort();
                     break;
-        case "Heap Sort":Heap();
+        case "Heap Sort":HeapSort();
                     break;
     }
 }
